@@ -1,6 +1,6 @@
 /* ===============================
    AUTH MANAGER
-=============================== */
+   
 const AuthManager = {
   checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
@@ -48,6 +48,7 @@ const AuthManager = {
     });
   }
 };
+=============================== */
 
 // Run Auth Check immediately
 AuthManager.checkAuth();
@@ -380,3 +381,4 @@ async function loadMenu() {
     console.error('Failed to load menu', err);
   }
 }
+
