@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed | Chakula Kitamu</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <style>
+    /* Simple Layout Overrides */
+    .dashboard-header { flex-direction: column; text-align: center; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid #eee; margin-bottom: 3rem; }
+    .page-title { font-size: 3rem; color: #e67e22; margin: 0; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; }
+    .links a { margin: 0 15px; font-weight: 600; color: #555; font-size: 1.1rem; transition: color 0.2s; }
+    .links a:hover { color: #e67e22; }
+
+    .confirmation-card {
+      background: white;
+      color: #333;
+      padding: 4rem 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      margin: 0 auto 3rem auto;
+      max-width: 800px;
+    }
+    
+    .confirmation-card h2 { font-size: 2.5rem; margin: 3 0 1rem; color: #2c3e50; }
+    .confirmation-card p { font-size: 1.2rem; margin-bottom: 0.5rem; color: #7f8c8d; line-height: 1.6; }
+    .success-icon { font-size: 5rem; color: #27ae60; display: block; margin-bottom: 1.5rem; }
+    .footer { text-align: center; margin-top: 3rem; color: #95a5a6; border-top: 1px solid #eee; padding-top: 2rem; }
+  </style>
+</head>
+<body>
+
+<main class="container">
+  <header class="dashboard-header">
+    <h1 class="page-title">Chakula Kitamu</h1>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="confirmation-card">
+    <div class="success-icon">✓</div>
+    <h2>Order Placed Successfully!</h2>
+    <p>Asante sana! Your delicious food is being prepared.</p>
+    <p>We will contact you shortly to confirm delivery details.</p>
+    
+    <a href="menu.html" class="btn btn-home">Order More Food</a>
+  </section>
+
+  <footer class="footer">
+    @epol-cafteria
+  </footer>
+</main>
+
+</body>
+</html>

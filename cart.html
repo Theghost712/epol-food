@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+
+<main class="container">
+  <header class="dashboard-header">
+    <h1 class="page-title">Shopping Cart</h1>
+
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <!-- aria-current indicates this is the active page -->
+      <a href="cart.html" aria-current="page">Cart (<span id="cartCount">0</span>)</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="cart-content">
+    <!-- The ID 'cartItems' matches your JS loadCart() function -->
+    <ul id="cartItems">
+      <!-- This text will be replaced by JS if the cart has items -->
+      <li class="empty-cart-msg">Your cart is currently empty.</li>
+    </ul>
+
+    <!-- Total Price Display -->
+    <div id="cartTotalContainer" class="cart-total">Total: <span id="cartTotalDisplay">Tsh 0</span></div>
+
+    <div class="cart-actions">
+      <!-- Primary Action: Clear Cart -->
+      <!-- We use a specific ID so we can attach the event listener in JS -->
+      <button id="clearCartBtn" class="btn btn-danger" type="button">Clear Cart</button>
+      
+      <!-- Secondary Action: Continue Shopping -->
+      <a href="menu.html" class="btn btn-secondary">Continue Shopping</a>
+
+      <!-- Primary Action: Checkout -->
+      <a href="checkout.html" class="btn">Proceed to Checkout</a>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Chakula Kitamu</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <style>
+    .checkout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .order-summary { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); height: fit-content; }
+    .order-item { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+    .total-row { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem; margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #333; }
+    @media(max-width: 768px) { .checkout-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<main class="container">
+  <header class="dashboard-header">
+    <h1 class="page-title">Checkout</h1>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="checkout-grid">
+    <!-- Checkout Form -->
+    <form id="checkoutForm">
+      <h2 style="margin-top:0;">Shipping Details</h2>
+      
+      <div class="input-group">
+        <input type="text" name="fullname" id="fullname" required placeholder=" ">
+        <label for="fullname">Full Name</label>
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="address" id="address" required placeholder=" ">
+        <label for="address">Delivery Address</label>
+      </div>
+
+      <div class="input-group">
+        <input type="tel" name="phone" id="phone" required placeholder=" ">
+        <label for="phone">Phone Number</label>
+      </div>
+
+      <div class="input-group">
+        <select name="payment" id="payment" required style="width:100%; padding:12px; border:1px solid #ddd; border-radius:6px; background:transparent;">
+          <option value="" disabled selected>Select Payment Method</option>
+          <option value="cash">Cash on Delivery</option>
+          <option value="mobile">Mobile Money</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+      <h2 style="margin-top:0;">Your Order</h2>
+      <ul id="checkoutItems">
+        <!-- Items loaded via JS -->
+      </ul>
+      <div class="total-row">
+        <span>Total</span>
+        <span id="checkoutTotal">Tsh 0</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
